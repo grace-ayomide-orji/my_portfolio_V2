@@ -14,7 +14,7 @@ function  About(){
 
                 <div className="about-info-body w-full md:w-[65%] md:pl-[24px] ">
 
-                    <h2 className="md:text-[45px] font-bold text-[#801B36]"><span  className="md:text-[50px]">Step Into My World</span><br/> I'm Oloruntobi Grace Ayomide,</h2>
+                    <h2 className="md:text-[45px] font-bold text-[#801B36]"><span  className="md:text-[50px]">Step Into My World</span><br/> I'm Grace Ayomide Orji,</h2>
 
                     <div className="mb-[25px]">
                         <p>an ardent Full-Stack Web Developer who thrives on bringing digital ideas to life through clean, innovative code. My journey into coding began at 18, driven by curiosity and a love for technology. I started by self-teaching with free online coding platforms, then pushed my skills further by diving into a Fullstack Web Development course on Udemy. To refine my expertise, I enrolled in a top-tier bootcamp where I gained hands-on experience and advanced training.</p>

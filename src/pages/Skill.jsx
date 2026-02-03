@@ -45,6 +45,13 @@ function  Skill(){
                     <i className="devicon-react-original text-4xl"></i>
                     <p>React</p>
                 </div>
+
+                <div className="w-1/3 sm:w-1/4 lg:w-1/6 mb-3 text-center">
+                    <i className="devicon-nextjs-plain text-4xl"></i>
+                    <p>Next.js</p>
+                </div>
+            
+          
             </div>
 
                 {/* Back-end Skills */}
@@ -60,12 +67,25 @@ function  Skill(){
                     <p>Flask</p>
                 </div>
                 <div className="w-1/3 sm:w-1/4 lg:w-1/6 mb-3 text-center">
+                    <i className="devicon-nextjs-plain text-4xl"></i>
+                    <p>Next.js</p>
+                </div>
+
+                <div className="w-1/3 sm:w-1/4 lg:w-1/6 mb-3 text-center">
+                    <i className="devicon-postgresql-plain text-4xl"></i>
+                    <p>Postgres-Sql</p>
+                </div>  
+                <div className="w-1/3 sm:w-1/4 lg:w-1/6 mb-3 text-center">
                     <i className="devicon-mysql-original text-4xl"></i>
                     <p>MySQL</p>
                 </div>
                 <div className="w-1/3 sm:w-1/4 lg:w-1/6 mb-3 text-center">
                     <i className="devicon-mongodb-plain text-4xl"></i>
                     <p>MongoDB</p>
+                </div>
+                <div className="w-1/3 sm:w-1/4 lg:w-1/6 mb-3 text-center">
+                    <i className="devicon-prisma-original text-4xl"></i>
+                    <p>Prisma</p>
                 </div>
                 <div className="w-1/3 sm:w-1/4 lg:w-1/6 mb-3 text-center">
                     <i className="devicon-fastapi-plain text-4xl"></i>

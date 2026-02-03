@@ -129,6 +129,7 @@ p{
   align-items:center;
   background-color:#801B36;
   color:#ffffff;
+  border-radius:8px;
   transform: scale(1);
   transition:transform 0.3s ease-in-out ,background 0.3s ease-in-out;
 }
@@ -198,21 +199,36 @@ span.waving-hand {
   margin-top:50px;
 }
 
-.send-message-hero-button{
-  padding:15px 40px;
-  background-color:#801B36;
-  color:#ffffff;
+.hero-buttons-links{
+  padding:12px 30px;
   text-wrap:nowrap;
-  display: inline-block;
-  font-size:18px;
-  margin-top:30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap:6px;
+  font-size:17px;
+  border-radius:8px;
   transform: scale(1);
-  transition:transform 0.3s ease-in-out ,background 0.3s ease-in-out;
+  transition:transform 0.3s ease-in-out;
 }
 
-.send-message-hero-button:hover{
+.hero-buttons-links svg{
+  font-size:15px;
+  display: inline-block;
+}
+
+.download-cv-btn{
+  border:#801B36 solid 1.6px;
+  color:#801B36;
+}
+
+.view-my-works{
+  background-color:#801B36;
+  color:#ffffff;
+}
+
+.hero-buttons-links:hover{
   transform: scale(1.1);
-  background-color:#9A2645;
 }
 
 
@@ -270,7 +286,7 @@ span.waving-hand {
 }
 
 .contact-info-body p{
-  font-size:20px;
+  font-size:18px;
   line-height:30px;
   color:#333333;
   letter-spacing:0.5px;
@@ -289,12 +305,13 @@ p.special-text a:hover{
   display: block;
   width:100%;
   margin-bottom:30px;
+  outline:2px solid transparent;
   border-style:solid;
   border-color:#4F4F4F;
   border-width: 1px;
   padding-left:10px;
-  outline:0 solid #801B36;
-  transition: outline 0.3s ease;
+  border-radius:8px;
+  transition: all 0.3s ease;
 }
 
 .contact-form-body form input{
@@ -305,10 +322,12 @@ p.special-text a:hover{
   font-family:"Bai Jamjuree", sans-serif;
   text-transform:uppercase;
   color: #333333;
+  font-size:16px;
 }
 
 .contact-form-body form input:hover, .contact-form-body form input:focus, .contact-form-body form textarea:hover,  .contact-form-body form textarea:focus{
-  outline: 2px solid #801B36;
+  border-color:#801B36;
+  outline-color: #801B3650;
 }
 
 .contact-form-body form button{
@@ -316,14 +335,18 @@ p.special-text a:hover{
   background-color:#801B36;
   color:#ffffff;
   text-wrap:nowrap;
-  font-size:18px;
+  font-size:16px;
+  border-radius:8px;
   transform: scale(1);
-  transition:transform 0.3s ease-in-out ,background 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap:10px;
+  transition:transform 0.3s ease-in-out;
 }
 
 .contact-form-body form button:hover{
   transform: scale(1.1);
-  background-color:#9A2645;
 }
 
 
@@ -359,7 +382,7 @@ p.special-text a:hover{
 }
 
 .about-info-body p{
-  font-size:20px;
+  font-size:18px;
   color: #333333;
   line-height:35px;
 }
@@ -440,6 +463,7 @@ p.special-text a:hover{
   color:#ffffff;
   background-color:#4F4F4F;
   border-radius:3px;
+  font-size:14px;
 }
 
 .links-div a{

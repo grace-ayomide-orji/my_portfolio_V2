@@ -12,7 +12,7 @@ const Toast = ({ message, type, onClose }) => {
             <p className="sm:text-[50px] text-[40px] mb-[30px]">{type === "success" ? "✅" : "❌"}</p>
             <p className="text-[18px]">{message}</p>
             <button className="ml-4 text-[18px] bg-[#801B36] px-[50px] py-[8px] mt-[20px] text-white 
-            hover:bg-[#9A2645]" 
+            hover:bg-[#9A2645] rounded-[8px]" 
             onClick={onClose}>Okay</button>
         </div>
     );
@@ -65,8 +65,8 @@ function Contact() {
                     <p className="special-text">Contact me directly: +234 816 853 3188</p>
 
                     <div className="flex gap-10 mt-[20px]">
-                        <a href="https://github.com/oloruntobi-grace-ayomide" target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon icon={faGithub} className="fas" /></a>
-                        <a href="https://www.linkedin.com/in/grace-oloruntobi-ab3a1a263" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} className="fas" /></a>
+                        <a href="https://github.com/grace-ayomide-orji" target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon icon={faGithub} className="fas" /></a>
+                        <a href="https://www.linkedin.com/in/grace-orji-ab3a1a263" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} className="fas" /></a>
                         
                     </div>
                 </div>
@@ -80,7 +80,7 @@ function Contact() {
                         <input required type="email" name="email" placeholder="YOUR EMAIL"/>
                         <textarea name="message"  placeholder="MESSAGE" rows="5" className="pt-[10px] mb-[20px]"></textarea>
                         <button type="submit" disabled={isSubmitting}> {isSubmitting ? (
-                            <img src={loader} alt="Loading..." className="block h-[50px] w-[50px] m-auto" />
+                            <img src={loader} alt="Loading..." className="block h-[30px] w-[30px]" />
                         ) : (
                             <>
                                 Send Message <FontAwesomeIcon icon={faPaperPlane} />

@@ -10,7 +10,7 @@ function Layout( { children } ){
                 { children }
             </main>
             <div className="footer text-center p-[10px] md:mt-[40px]">
-                <p>© Oloruntobi Grace Ayomide {new Date().getFullYear()}</p>
+                <p>© Grace Ayomide Orji {new Date().getFullYear()}</p>
             </div>
         </div>
     )
