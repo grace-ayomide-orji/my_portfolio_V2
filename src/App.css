@@ -558,10 +558,6 @@ p.special-text a:hover{
   font-size:40px;
 }
 
-.project-box{
-  width: 45%;
-}
-
 /* error page */
 .error-page h1{
   font-size:50px;
@@ -770,10 +766,6 @@ p.special-text a:hover{
   font-size:25px;
 }
 
-.project-box{
-  width:100%;
-}
-
 .project-box:not(:last-child){
   margin-bottom:45px;
 }
@@ -943,10 +935,6 @@ p.special-text a:hover{
 
 .skill-hub-header{
   font-size:38px;
-}
-
-.project-box{
-  width:100%;
 }
 
 .project-box:not(:last-child){
@@ -1130,8 +1118,7 @@ p.special-text a:hover{
   font-size:38px;
 }
 
-.project-box{
-  width:100%;
+.project-box:not(:last-child){
   margin-bottom:45px;
 }
 /* error page */
