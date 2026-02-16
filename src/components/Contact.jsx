@@ -1,5 +1,5 @@
 import { useRef , useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs from '@emailjs/browser';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faPaperPlane} from "@fortawesome/free-solid-svg-icons";

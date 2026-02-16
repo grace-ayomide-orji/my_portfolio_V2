@@ -2,6 +2,9 @@ import { useState } from 'react';
 import Layout from "../components/Layout";
 import responsiveImg from "../assets/icons/responsive.png"
 import hoverImg from "../assets/icons/responsive_hover.png"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faOpenai } from '@fortawesome/free-brands-svg-icons';
+import { faComments, faCircleNodes, faRobot } from '@fortawesome/free-solid-svg-icons';
 function  Skill(){
     const [imageSrc, setImageSrc] = useState(responsiveImg);
     return(
@@ -54,7 +57,7 @@ function  Skill(){
           
             </div>
 
-                {/* Back-end Skills */}
+            {/* Back-end Skills */}
             <div className="skill-box flex flex-wrap justify-center text-center gap-6" data-aos="fade-up" data-aos-delay="200">
                 <h2 className="w-full text-center text-[30px] py-[10px]">Back-end Stack</h2>
                 
@@ -72,9 +75,10 @@ function  Skill(){
                 </div>
 
                 <div className="w-1/3 sm:w-1/4 lg:w-1/6 mb-3 text-center">
-                    <i className="devicon-postgresql-plain text-4xl"></i>
-                    <p>Postgres-Sql</p>
-                </div>  
+                <i className="devicon-express-original text-4xl"></i>
+                    <p>Express</p>
+                </div>
+
                 <div className="w-1/3 sm:w-1/4 lg:w-1/6 mb-3 text-center">
                     <i className="devicon-mysql-original text-4xl"></i>
                     <p>MySQL</p>
@@ -93,8 +97,37 @@ function  Skill(){
                 </div>
             </div>
 
+            {/* AI & LLM Skills */}
+            <div className="skill-box flex flex-wrap justify-center text-center gap-6" data-aos="fade-up" data-aos-delay="250">
+                <h2 className="w-full text-center text-[30px] py-[10px]">AI & Agentic Programming</h2>
+                
+                <div className="w-1/3 sm:w-1/4 lg:w-1/6 mb-3 text-center">
+                    <FontAwesomeIcon icon={faOpenai} className="text-4xl" /> 
+                    <p>OpenAI API</p>
+                </div>
+             
+                <div className="w-1/3 sm:w-1/4 lg:w-1/6 mb-3 text-center">
+                    <i className="devicon-vercel-original text-4xl"></i>
+                    <p>Vercel AI SDK</p>
+                </div>
 
-                {/* Other Tools */}
+                <div className="w-1/3 sm:w-1/4 lg:w-1/6 mb-3 text-center">
+                    <FontAwesomeIcon icon={faComments} className="text-4xl" />
+                    <p>Prompt Engineering</p>
+                </div>
+               
+                <div className="w-1/3 sm:w-1/4 lg:w-1/6 mb-3 text-center">
+                    <FontAwesomeIcon icon={faCircleNodes} className="text-4xl" />
+                    <p>RAG Systems</p>
+                </div>
+
+                <div className="w-1/3 sm:w-1/4 lg:w-1/6 mb-3 text-center">
+                    <FontAwesomeIcon icon={faRobot} className="text-4xl" />
+                    <p>AI Agents</p>
+                </div>
+            </div>
+
+            {/* Other Tools */}
             <div className="skill-box flex flex-wrap justify-center text-center gap-6" data-aos="fade-up" data-aos-delay="300"> 
 
                 <h2 className="w-full text-center text-[30px] py-[10px]">Other Tools</h2>   
