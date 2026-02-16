@@ -71,7 +71,7 @@ function Navbar(){
                 </li>
 
                 <li>
-                    <NavLink to="/project" className={({ isActive }) => isActive && window.location.hash === '' ? "nav-links active" : "nav-links"} end>Projects
+                    <NavLink to="/projects" className={({ isActive }) => isActive && window.location.hash === '' ? "nav-links active" : "nav-links"} end>Projects
                     </NavLink>
                 </li>
 
@@ -87,7 +87,6 @@ function Navbar(){
                         <img src={dowloadIcon} alt="download-my-resume-icon" className='inline w-[18px] h-[18px]'/>
                     </a>
                 </li>
-
             </ul>  
            
         </nav>

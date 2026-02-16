@@ -24,57 +24,6 @@ p{
   color:#801B36;
 }
 
-/* Toggler component styling */
-
-.toggler-box{
-  border-radius:15px;
-  display: flex;
-  justify-content: space-around;
-  flex-direction:column;
-  background-color: #ffffff;
-  height:100px;
-  width: 32px;
-  position: fixed;
-  bottom:10px;
-  right:5px;
-  z-index:99999;
-  box-shadow:1px 1px 3px;
-} 
-
-.toggle-label{
-  position: relative;
-  cursor: pointer;
-  display: block;
-  padding:5px 1px;
-  text-transform: uppercase;
-  font-weight:900;
-  text-align: center;
-  color: #801B36;
-}
-
-.toggle-label::after {
-  content: attr(data-tit); /* Get text from title attribute */
-  position: absolute;
-  right:35px;
-  top:1px;
-  background-color:#333;
-  color:#ffffff;
-  padding:5px 10px;
-  border-radius:4px;
-  font-size: 15px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease-in-out,;
-  white-space: nowrap;
-  text-transform:none;
-  font-weight:500;
-}
-
-.toggle-label:hover::after {
-  opacity: 1;
-  visibility: visible;
-}
-
 .parent-container{
   padding-top:20px;
   background-color:#F8F8F8;
@@ -129,6 +78,7 @@ p{
   align-items:center;
   background-color:#801B36;
   color:#ffffff;
+  border-radius:8px;
   transform: scale(1);
   transition:transform 0.3s ease-in-out ,background 0.3s ease-in-out;
 }
@@ -191,28 +141,43 @@ span.waving-hand {
 }
 
 .profile-pic img:hover {
-  transform: scale(1.1);
+  transform: scale(1.06);
 }
 
 .intro {
   margin-top:50px;
 }
 
-.send-message-hero-button{
-  padding:15px 40px;
-  background-color:#801B36;
-  color:#ffffff;
+.hero-buttons-links{
+  padding:12px 30px;
   text-wrap:nowrap;
-  display: inline-block;
-  font-size:18px;
-  margin-top:30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap:6px;
+  font-size:17px;
+  border-radius:8px;
   transform: scale(1);
-  transition:transform 0.3s ease-in-out ,background 0.3s ease-in-out;
+  transition:transform 0.3s ease-in-out;
 }
 
-.send-message-hero-button:hover{
+.hero-buttons-links svg{
+  font-size:15px;
+  display: inline-block;
+}
+
+.download-cv-btn{
+  border:#801B36 solid 1.6px;
+  color:#801B36;
+}
+
+.view-my-works{
+  background-color:#801B36;
+  color:#ffffff;
+}
+
+.hero-buttons-links:hover{
   transform: scale(1.1);
-  background-color:#9A2645;
 }
 
 
@@ -270,7 +235,7 @@ span.waving-hand {
 }
 
 .contact-info-body p{
-  font-size:20px;
+  font-size:18px;
   line-height:30px;
   color:#333333;
   letter-spacing:0.5px;
@@ -289,12 +254,13 @@ p.special-text a:hover{
   display: block;
   width:100%;
   margin-bottom:30px;
+  outline:2px solid transparent;
   border-style:solid;
   border-color:#4F4F4F;
   border-width: 1px;
   padding-left:10px;
-  outline:0 solid #801B36;
-  transition: outline 0.3s ease;
+  border-radius:8px;
+  transition: all 0.3s ease;
 }
 
 .contact-form-body form input{
@@ -305,10 +271,12 @@ p.special-text a:hover{
   font-family:"Bai Jamjuree", sans-serif;
   text-transform:uppercase;
   color: #333333;
+  font-size:16px;
 }
 
 .contact-form-body form input:hover, .contact-form-body form input:focus, .contact-form-body form textarea:hover,  .contact-form-body form textarea:focus{
-  outline: 2px solid #801B36;
+  border-color:#801B36;
+  outline-color: #801B3650;
 }
 
 .contact-form-body form button{
@@ -316,14 +284,18 @@ p.special-text a:hover{
   background-color:#801B36;
   color:#ffffff;
   text-wrap:nowrap;
-  font-size:18px;
+  font-size:16px;
+  border-radius:8px;
   transform: scale(1);
-  transition:transform 0.3s ease-in-out ,background 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap:10px;
+  transition:transform 0.3s ease-in-out;
 }
 
 .contact-form-body form button:hover{
   transform: scale(1.1);
-  background-color:#9A2645;
 }
 
 
@@ -359,7 +331,7 @@ p.special-text a:hover{
 }
 
 .about-info-body p{
-  font-size:20px;
+  font-size:18px;
   color: #333333;
   line-height:35px;
 }
@@ -402,53 +374,30 @@ p.special-text a:hover{
   cursor:pointer;
 }
 
-.skill-box div i,.skill-box div img {
+.skill-box div i,.skill-box div svg, .skill-box div img {
     width:50px;
 }
 
-.skill-box p, .skill-box i, .skill-box div img{
+.skill-box p, .skill-box i, .skill-box div svg, .skill-box div img{
   color:#ffffff;
   transition:color 0.3s ease;
 }
 
 .skill-box div:hover p, 
-.skill-box div:hover i {
+.skill-box div:hover i,
+.skill-box div:hover svg {
   color:#C74769;
 }
 
 
 /* Project page styling */
 .project-parent{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:space-between;
   padding-top:50px;
   padding-bottom:50px;
 }
 
 .project-box{
-  width:30%;
   margin-bottom:50px;
-}
-
-.project-box, .screenshot-img, .screenshot-img img{
-  border-radius:5px 5px 0px 0px;
-}
-
-.tech-stack li{
-  padding:1px 3px;
-  color:#ffffff;
-  background-color:#4F4F4F;
-  border-radius:3px;
-}
-
-.links-div a{
-  color:#801B36;
-  font-size:20px;
-}
-
-.links-div a:hover{
-  text-decoration: underline;
 }
 
 /* error page */
@@ -515,6 +464,10 @@ p.special-text a:hover{
 }
 
 .intro h1{
+  font-size:55px;
+}
+
+.intro span.waving-hand{
   font-size:55px;
 }
 
@@ -607,10 +560,6 @@ p.special-text a:hover{
 
 .project-box{
   width: 45%;
-}
-
-.links-div a{
-  font-size:18px;
 }
 
 /* error page */
@@ -728,6 +677,10 @@ p.special-text a:hover{
   font-size:45px;
 }
 
+.intro span.waving-hand{
+  font-size:45px;
+}
+
 .intro h2{
   font-size:34px;
   font-weight: 900;
@@ -825,10 +778,6 @@ p.special-text a:hover{
   margin-bottom:45px;
 }
 
-.links-div a{
-  font-size:18px;
-}
-
 /* error page */
 .error-page h1{
   font-size:45px;
@@ -879,6 +828,10 @@ p.special-text a:hover{
 }
 
 .intro h1{
+  font-size:45px;
+}
+
+.intro span.waving-hand{
   font-size:45px;
 }
 
@@ -1000,10 +953,6 @@ p.special-text a:hover{
   margin-bottom:45px;
 }
 
-.links-div a{
-  font-size:18px;
-}
-
 /* error page */
 .error-page h1{
   font-size:35px;
@@ -1059,6 +1008,10 @@ p.special-text a:hover{
 }
 
 .intro h1{
+  font-size:30px;
+}
+
+.intro span.waving-hand{
   font-size:30px;
 }
 
@@ -1181,11 +1134,6 @@ p.special-text a:hover{
   width:100%;
   margin-bottom:45px;
 }
-
-.links-div a{
-  font-size:18px;
-}
-
 /* error page */
 .error-page h1{
   font-size:25px;

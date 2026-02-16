@@ -73,7 +73,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about-me" element={<About />} />
           <Route path="/skill" element={<Skill />} />
-          <Route path="/project" element={<Project />} />
+          <Route path="/projects" element={<Project />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         
