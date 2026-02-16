@@ -1,20 +1,23 @@
 import { useState, useRef, useEffect } from 'react';
 import Layout from "../components/Layout";
-import beulah from '../assets/images/beulah.png'
-import handyman from '../assets/images/handyman.png'
-import portfolio from '../assets/images/portfolio.png'
-import portfoliov2 from '../assets/images/portfolio_v2.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import {faLink} from "@fortawesome/free-solid-svg-icons";
 
+
+const beulah = '/beulah.png'
+const handyman = '/handyman.png'
+const portfolio = '/portfolio.png'
+const portfoliov2 = '/portfolio_v2.png'
+const pulseCast = '/pulse_cast.png'
+ 
 const projects = [
     {
         id: 1,
         name: "MyHandyman",
         description: "A Flask-based service marketplace for hiring professionals, featuring service listings, user authentication, and booking. Hosted on PythonAnywhere.",
         image: handyman,
-        link: "https://github.com/oloruntobi-grace-ayomide/handyman",
+        link: "https://github.com/grace-ayomide-orji/handyman",
         website: "https://myhandyman.pythonanywhere.com/",
         techStack: ["HTML", "CSS", "JavaScript", "jQuery", "Python(Flask)", "Mysql"]
     },
@@ -23,7 +26,7 @@ const projects = [
         name: "My Portfolio v1",
         description: "A personal Flask-based portfolio. This portfolio showcases my skills, projects, and experience as a Full-Stack Web Developer Hosted on Render.",
         image: portfolio,
-        link: "https://github.com/oloruntobi-grace-ayomide/my_portfolio",
+        link: "https://github.com/grace-ayomide-orji/my_portfolio",
         website: "https://my-portfolio-uy10.onrender.com/",
         techStack: ["HTML", "CSS", "JavaScript", "Python(Flask)"]
     },
@@ -32,7 +35,7 @@ const projects = [
         name: "Beulah",
         description: "A Flask-powered church ministry website for sharing resources, audio messages, and event updates. It includes an admin dashboard and a modern, welcoming design. Hosted on GoDaddy.",
         image: beulah,
-        link: "https://github.com/oloruntobi-grace-ayomide/Beulah-App",
+        link: "https://github.com/grace-ayomide-orji/Beulah-App",
         website: "https://beufoundation.org/",
         techStack: ["HTML", "CSS", "JavaScript", "Python(Flask)", "Mysql"]
     },  
@@ -41,9 +44,18 @@ const projects = [
         name: "My Portfolio v2",
         description: "A sleek, interactive portfolio version 2 built with React and Tailwind for a smooth user experience. Hosted on Render.",
         image: portfoliov2,
-        link: "https://github.com/oloruntobi-grace-ayomide/my_portfolio_V2",
+        link: "https://github.com/grace-ayomide-orji/my_portfolio_V2",
         website: "https://www.graceayomide.com",
         techStack: ["React", "Tailwind"]
+    },
+    {
+        id: 5,
+        name: "PulseCast",
+        description: "A dynamic Next.js 15 app combining real-time news aggregation and weather forecasts. Built as my first Next.js project for a job requirement, a challenging yet rewarding journey into modern React frameworks.",
+        image: pulseCast,
+        link: "https://github.com/oloruntobi-grace-ayomide/pulseCast",
+        website: "https://pulse-cast-pi.vercel.app",
+        techStack: ["Next.js", "Tailwind", "NewsAPI", "OpenWeatherMap"]
     }
 ]
 
@@ -68,7 +80,7 @@ function Project (){
     const filteredProjects = activeFilter === "All" ? projects  : projects.filter(project => project.techStack.some(tech => tech.includes(activeFilter)));
 
     // Define filter buttons based on key technologies
-    const filters = ["All", "React", "Flask", "JavaScript", "HTML", "CSS", "jQuery", "Python(Flask)", "Mysql", "MongoDB", "Prisma", "RESTful API", "OpenAI API", "Vercel AI SDK", "Prompt Engineering"];
+    const filters = ["All", "React", "Flask", "Next.js", "JavaScript", "HTML", "CSS", "jQuery", "Python(Flask)", "Mysql", "MongoDB", "Prisma", "API", "Vercel AI SDK", "Prompt Engineering"];
 
     return(
         <Layout>
@@ -125,12 +137,13 @@ function Project (){
 
                 {filteredProjects.length > 0 ?
                     (filteredProjects.map((project, index) => (
-                        <div className="project-box md:flex md:items-center gap-x-5 gap-y-3 rounded-lg bg-white lg:h-[250px] md:h-[300px] h-fit shadow-md hover:shadow-2xl transition-shadow duration-300 ease-in-out" key={index} data-aos="fade-up" data-aos-easing='ease-in-out'>
-                            <div className="project-img bg-[#801B36] rounded-t-lg md:rounded-l-lg md:rounded-r-none md:h-[98%] md:ml-[3px] md:w-[35%] w-full">
-                                <img src={project.image} alt={project.name} className="w-full h-full rounded-t-lg md:rounded-l-lg md:rounded-r-none object-cover"/>
+                        <div className="project-box md:flex md:items-center gap-x-5 gap-y-3 rounded-lg bg-white lg:min-h-[250px] md:min-h-[300px] h-fit shadow-md hover:shadow-2xl transition-shadow duration-300 ease-in-out" key={index} data-aos="fade-up" data-aos-easing='ease-in-out'>
+                            
+                            <div className="project-img bg-[#801B36] rounded-t-lg md:rounded-l-lg md:rounded-r-none lg:min-h-[250px] md:min-h-[300px] h-full md:ml-[3px] md:w-[35%] w-full">
+                                <img src={project.image} alt={project.name} className="w-full lg:min-h-[250px] md:min-h-[300px] h-full rounded-t-lg md:rounded-l-lg md:rounded-r-none object-cover"/>
                             </div>
 
-                            <div className="project-content md:w-[65%] w-full md:p-0 p-4">
+                            <div className="md:w-[65%] w-full p-4 md:p-0">
                                 <h3 className="md:text-[30px] text-[24px] font-semibold">{project.name}</h3>
                                 <p className="text-[16px] md:w-[85%]">{project.description}</p>
                                 {project.techStack.length > 0 && (
