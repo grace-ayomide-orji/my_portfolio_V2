@@ -125,9 +125,9 @@ function Project (){
 
                 {filteredProjects.length > 0 ?
                     (filteredProjects.map((project, index) => (
-                        <div className="project-box md:flex md:items-center gap-x-5 gap-y-3 rounded-lg bg-white md:h-[250px] h-fit shadow-md hover:shadow-2xl transition-shadow duration-300 ease-in-out" key={index} data-aos="fade-up" data-aos-easing='ease-in-out'>
+                        <div className="project-box md:flex md:items-center gap-x-5 gap-y-3 rounded-lg bg-white lg:h-[250px] md:h-[300px] h-fit shadow-md hover:shadow-2xl transition-shadow duration-300 ease-in-out" key={index} data-aos="fade-up" data-aos-easing='ease-in-out'>
                             <div className="project-img bg-[#801B36] rounded-t-lg md:rounded-l-lg md:rounded-r-none md:h-[98%] md:ml-[3px] md:w-[35%] w-full">
-                                <img src={project.image} alt={project.name} className="w-full h-full rounded-t-lg md:rounded-l-lg md:rounded-r-none"/>
+                                <img src={project.image} alt={project.name} className="w-full h-full rounded-t-lg md:rounded-l-lg md:rounded-r-none object-cover"/>
                             </div>
 
                             <div className="project-content md:w-[65%] w-full md:p-0 p-4">
@@ -148,7 +148,7 @@ function Project (){
                         </div>
                     ))
                     ):( 
-                        <div className="project-box md:flex md:items-center gap-x-5 gap-y-3 rounded-lg bg-white md:h-[250px] h-fit p-8 shadow-md hover:shadow-2xl transition-shadow duration-300 ease-in-out" data-aos="fade-up" data-aos-easing='ease-in-out'>
+                        <div className="project-box md:flex md:items-center gap-x-5 gap-y-3 rounded-lg bg-white lg:h-[250px] md:h-[300px] h-fit p-8 shadow-md hover:shadow-2xl transition-shadow duration-300 ease-in-out" data-aos="fade-up" data-aos-easing='ease-in-out'>
                             <div className="text-center w-full">
                                 <svg className="w-16 h-16 mx-auto mb-4 text-[#801B36] opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
