@@ -24,7 +24,7 @@ function  Home(){
                     </div>
                     <div className="flex gap-x-5 md:gap-y-o gap-y-4 md:flex-row flex-col mt-[20px]">
                         <Link to="/projects" className="hero-buttons-links view-my-works"> View My Works <FontAwesomeIcon icon={faArrowRight} /></Link>
-                        <Link to="https://drive.google.com/file/d/1--Kt8CLPorRul3bkoJgIfqn8HsWioA58/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hero-buttons-links download-cv-btn"> Download CV <FontAwesomeIcon icon={faDownload} /></Link>
+                        <Link to="https://drive.google.com/file/d/18fFHDe8v_CE-QZMEy88q9sYRtfvWJ8ca/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hero-buttons-links download-cv-btn"> Download CV <FontAwesomeIcon icon={faDownload} /></Link>
                     </div>
                 </div>
 

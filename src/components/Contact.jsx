@@ -2,14 +2,17 @@ import { useRef , useState } from "react";
 import emailjs from '@emailjs/browser';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faPaperPlane} from "@fortawesome/free-solid-svg-icons";
-import loader from '../assets/icons/loader.svg'
+import { faPaperPlane, faCircleNotch, faCheck, faX} from "@fortawesome/free-solid-svg-icons";
+
 
 
 const Toast = ({ message, type, onClose }) => {
     return (
         <div className="fixed inset-0 z-[1000000] m-auto sm:w-[350px] sm:h-[250px] w-[280px] h-[220px] flex flex-col justify-center items-center px-4 py-2 rounded-md shadow-lg text-center bg-[#fff]">
-            <p className="sm:text-[50px] text-[40px] mb-[30px]">{type === "success" ? "✅" : "❌"}</p>
+            <div className={`rounded-full w-12 h-12 flex justify-center items-center  mb-[10px]
+                ${type === "success" ? "bg-green-100 !text-green-600" : "bg-red-100 !text-red-600"}`}>
+                {type === "success" ? <FontAwesomeIcon icon={faCheck} className="w-5 h-5" /> : <FontAwesomeIcon icon={faX} className="w-5 h-5"/>}
+            </div>
             <p className="text-[18px]">{message}</p>
             <button className="ml-4 text-[18px] bg-[#801B36] px-[50px] py-[8px] mt-[20px] text-white 
             hover:bg-[#9A2645] rounded-[8px]" 
@@ -19,7 +22,6 @@ const Toast = ({ message, type, onClose }) => {
 };
 
 function Contact() {
-
 
     const form = useRef();
     const [toast, setToast] = useState(null);
@@ -31,11 +33,14 @@ function Contact() {
         setIsSubmitting(true)
         try{
 
-            const result = await emailjs.sendForm(
-                import.meta.env.VITE_EMAILJS_SERVICE_ID,
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-                form.current,
-                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+            const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+            const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+            const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+            await emailjs.sendForm(
+                serviceID,
+                templateID,
+                form.current, 
+                publicKey 
             );
             // console.log("Email sent successfully:", result.text);
             setToast({ message: "Message sent successfully! Thank you!", type: "success" });
@@ -71,7 +76,7 @@ function Contact() {
                     </div>
                 </div>
 
-
+                {/* // <img src={loader} alt="Loading..." className="block h-[20px] w-[20px]" /> */}
                 <div className="contact-form-body w-full md:w-[48%]">
 
                     <form ref={form} onSubmit={sendEmail} method="POST">
@@ -79,8 +84,8 @@ function Contact() {
                         <input required type="text" name="name" placeholder="YOUR NAME"/>
                         <input required type="email" name="email" placeholder="YOUR EMAIL"/>
                         <textarea name="message"  placeholder="MESSAGE" rows="5" className="pt-[10px] mb-[20px]"></textarea>
-                        <button type="submit" disabled={isSubmitting}> {isSubmitting ? (
-                            <img src={loader} alt="Loading..." className="block h-[30px] w-[30px]" />
+                        <button type="submit" disabled={isSubmitting || toast} className="disabled:opacity-60 disabled:cursor-not-allowed"> {isSubmitting ? (
+                            <FontAwesomeIcon icon={faCircleNotch} className="animate-spin h-5 w-5"/>
                         ) : (
                             <>
                                 Send Message <FontAwesomeIcon icon={faPaperPlane} />
