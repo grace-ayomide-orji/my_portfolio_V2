@@ -1,12 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
 import dowloadIcon from '../assets/icons/download_resume.png'
 import myLogo from '../assets/images/my_logo.png'
 
 
 function Navbar(){
-    const location = useLocation();
     const [isOpen, setIsOpen] = useState(false);
     const navRef = useRef(null);
 
@@ -63,6 +61,12 @@ function Navbar(){
                     <NavLink to="/skill" className={({ isActive }) => isActive && window.location.hash === '' ? "nav-links active" : "nav-links"} end>Skills
                     </NavLink>
                 </li>
+
+                <li>
+                    <NavLink to="/experience" className={({ isActive }) => isActive && window.location.hash === '' ? "nav-links active" : "nav-links"} end>Experience
+                    </NavLink>
+                </li>
+
 
                 <li className="hidden md:block large-screen-logo"> 
                     <NavLink to="/">

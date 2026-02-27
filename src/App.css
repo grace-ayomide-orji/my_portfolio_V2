@@ -53,7 +53,7 @@ p{
 
 .nav-links {
   font-weight:600;
-  font-size:18px;
+  font-size:17px;
   text-transform:capitalize;
   padding:3px 5px;
   color:#4F4F4F;
@@ -68,12 +68,12 @@ p{
 }
 
 .large-screen-logo img{
-  width:130px;
+  width:120px;
   height:45px;
 }
 
 .download-resume {
-  padding:15px 30px;
+  padding:8px 30px;
   display:flex;
   align-items:center;
   background-color:#801B36;
@@ -391,14 +391,55 @@ p.special-text a:hover{
 
 
 /* Project page styling */
-.project-parent{
+.project-parent, .experience-parent{
   padding-top:50px;
   padding-bottom:50px;
 }
 
-.project-box{
+.project-box, .experience-box{
   margin-bottom:50px;
 }
+
+
+.project-modal {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.project-modal:hover {
+  scrollbar-color: #888 transparent;
+}
+
+.project-modal::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+.project-modal::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.project-modal::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.project-modal::-webkit-scrollbar-button{
+  display: none !important;
+  height: 0 !important;
+  width: 0 !important;
+  background-color:transparent !important;
+}
+
+.project-modal:hover::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.project-modal-header{
+  box-shadow:3px 3px 3px rgba(0, 0, 0, 0.3), -3px -3px 3px rgba(255, 255, 255, 0.1);
+}
+
 
 /* error page */
 .error-page h1{
@@ -442,7 +483,7 @@ p.special-text a:hover{
 }
   
 .navbar-container {
-  width:91%;
+  width:95%;
 }
 
 .nav-links {
@@ -451,7 +492,8 @@ p.special-text a:hover{
 }
   
 .download-resume {
-  padding:30px 10px;
+  padding:8px 8px;
+  font-size:17px;
 }
 
 .profile-pic {
