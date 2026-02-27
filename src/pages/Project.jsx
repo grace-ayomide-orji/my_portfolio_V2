@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import Layout from "../components/Layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
-import {faLink} from "@fortawesome/free-solid-svg-icons";
+import {faLink, faX} from "@fortawesome/free-solid-svg-icons";
 
 
 const beulah = '/beulah.png'
@@ -11,12 +11,14 @@ const portfolio = '/portfolio.png'
 const portfoliov2 = '/portfolio_v2.png'
 const pulseCast = '/pulse_cast.png'
 const tripMate = '/tripmate.png'
+const yunCapital='/yuncapital.png'
+const exceedingGrace='/exceedinggrace.png'
  
 const projects = [
     {
         id: 1,
         name: "MyHandyman",
-        description: "A Flask-based service marketplace for hiring professionals, featuring service listings, user authentication, and booking. Hosted on PythonAnywhere.",
+        description: "My very first project, built from scratch as the final exam of my bootcamp. It's a service marketplace where users can browse, book, and manage handyman services. I chose Python(Flask) because that's what i learned, and I handled everything from authentication, database design (MySQL), to frontend with Bootstrap. It was challenging but incredibly rewarding, finishing it gave me the confidence to present something real at the end of the course. Interestingly, this project landed me my first internship. It will always hold a special place in my heart.",
         image: handyman,
         link: "https://github.com/grace-ayomide-orji/handyman",
         website: "https://myhandyman.pythonanywhere.com/",
@@ -25,7 +27,7 @@ const projects = [
     {
         id: 2,
         name: "My Portfolio v1",
-        description: "A personal Flask-based portfolio. This portfolio showcases my skills, projects, and experience as a Full-Stack Web Developer Hosted on Render.",
+        description: "My first attempt at a personal portfolio, built with Flask. I needed a place to showcase all the projects I was building while job hunting. It's simple, but it did the job and i hosted it Render. It held my resume, project links, and contact info. Looking back, it's a nice time capsule of where I started.",
         image: portfolio,
         link: "https://github.com/grace-ayomide-orji/my_portfolio",
         website: "https://my-portfolio-uy10.onrender.com/",
@@ -34,7 +36,7 @@ const projects = [
     {
         id: 3,
         name: "Beulah",
-        description: "A Flask-powered church ministry website for sharing resources, audio messages, and event updates. It includes an admin dashboard and a modern, welcoming design. Hosted on GoDaddy.",
+        description: "After bootcamp, I wanted to use my new skills to give back. I attend a wonderful non-denominational fellowship ministry called Beulah Foundation for Christ, and at the time their website was outdated and barely functional. So I took it upon myself to build them a new one and it was my first unsupervised project. I designed the UI, built it with Flask, added an admin dashboard for managing resources and event updates, and even handled the GoDaddy deployment. Seeing it live and knowing it serves the community fills me with pride and joy.",
         image: beulah,
         link: "https://github.com/grace-ayomide-orji/Beulah-App",
         website: "https://beufoundation.org/",
@@ -43,7 +45,7 @@ const projects = [
     {
         id: 4,
         name: "My Portfolio v2",
-        description: "A sleek, interactive portfolio version 2 built with React and Tailwind for a smooth user experience. Hosted on Render.",
+        description: "After landing my first job, I realized I needed to level up my frontend skills. I hadn't learned React during bootcamp, so I decided to rebuild my portfolio as a learning project. I taught myself React and Tailwind CSS (coming from Bootstrap) and created this sleek, interactive version. The difference between v1 and v2 is like night and day, it shows how much I've grown in design and frontend development. I'm really proud of it.",
         image: portfoliov2,
         link: "https://github.com/grace-ayomide-orji/my_portfolio_V2",
         website: "https://www.graceayomide.com",
@@ -52,26 +54,46 @@ const projects = [
     {
         id: 5,
         name: "PulseCast",
-        description: "A dynamic Next.js 15 app combining real-time news aggregation and weather forecasts. Built as my first Next.js project for a job requirement, a challenging yet rewarding journey into modern React frameworks.",
+        description: "This project was born from a high-stakes challenge. I received a job offer that required Next.js knowledge, which I didn't have at the time. The company gave me one week to learn it and build a project. So I immersed myself in Next.js 15 and created PulseCast, a real-time news and weather app with search functionality. It was tough, but because I already knew React, I was able to adapt quickly. The result? I got the job, and they were impressed by how fast I learned. PulseCast represents my ability to rise to a challenge",
         image: pulseCast,
         link: "https://github.com/oloruntobi-grace-ayomide/pulseCast",
         website: "https://pulse-cast-pi.vercel.app",
-        techStack: ["Next.js", "Tailwind", "NewsAPI", "OpenWeatherMap"]
+        techStack: ["Next.js", "Typescript", "Tailwind", "NewsAPI", "OpenWeatherMap"]
     },
     {
         id: 6,
         name: "Tripmate",
-        description: "TripMate is an AI travel assistant built with Next.js 15, featuring real-time chat (Vercel ai sdk)and tools like trip card, packing lists and files upload. It showcases full-stack skills including serverless APIs, and optimistic UI updates.",
+        description: "While working at that job, I needed to learn Vercel's AI SDK to build AI features. The company encourages learning by doing, so I built TripMate, an AI travel assistant. It uses the Vercel AI SDK for real-time chat, helps users plan trips with packing lists and file uploads, and integrates weather data. It was my playground for mastering AI prompts, serverless functions, and optimistic UI updates. It's a full-stack showcase of what I learned on the job.",
         image: tripMate,
         link: "https://github.com/grace-ayomide-orji/TripMate",
         website: "https://trip-mate-v1.vercel.app",
-        techStack: ["Next.js", "Tailwind", "Vercel AI SDK", "OpenWeatherMap"]
+        techStack: ["Next.js", "Typescript", "Tailwind", "Vercel AI SDK", "OpenWeatherMap"]
     },
+    {
+        id: 7,
+        name: "Yun Capital",
+        description: "One day I stumbled upon yuncapital.com and was struck by how outdated it looked. I thought, 'This could be so much better.' So as a frontend challenge, I rebuilt the entire site from scratch with React and Tailwind, giving it a modern, professional look. I even reached out to the original owners (they never replied), but the project was never about them, it was about proving to myself that I could take a poorly designed site and transform it into something credible, functioning, serve targeted audience and beautiful. It's a testament to my initiative and design sense.",
+        image: yunCapital,
+        link: "https://github.com/grace-ayomide-orji/Yun",
+        website: "https://yuncapitalmanagement.vercel.app",
+        techStack: ["React", "Tailwind", "AOS"]
+    },
+    {
+        id: 8,
+        name: "Exceeding Grace Daycare",
+        description: "This project is close to my heart. It's for my sister's guidance, her new daycare business. When she started Exceeding Grace Daycare at home, I wanted to contribute more than just encouragement. I noticed the flyers she was using could use a little design love (I'd been playing around with Canva), so I helped create better marketing materials. But I thought, why stop there? A website would give parents a professional place to learn about the daycare, see what makes it special, and even book a tour. So I built a her clean website, welcoming, and easy to navigate. It includes information about the program, photos of the space, and a simple way for parents to schedule visits. Seeing my sister's face when the site went live was priceless. It's one thing to build projects for a portfolio, it's another to build something that helps family. This one will always remind me that code can be a gift.",
+        image: exceedingGrace,
+        link: "https://github.com/grace-ayomide-orji/ExceedingGrace",
+        website: "https://exceedinggrace.vercel.app",
+        techStack: ["React", "Tailwind", "AOS"]
+    }
 ]
 
 function Project (){
     const [activeFilter, setActiveFilter] = useState("All");
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false);
+    const [selectedProject, setSelectedProject] = useState(null);
 
     const dropdownRef = useRef(null);
 
@@ -90,7 +112,7 @@ function Project (){
     const filteredProjects = activeFilter === "All" ? projects  : projects.filter(project => project.techStack.some(tech => tech.includes(activeFilter)));
 
     // Define filter buttons based on key technologies
-    const filters = ["All", "React", "Flask", "Next.js", "JavaScript", "HTML", "CSS", "jQuery", "Python(Flask)", "Mysql", "MongoDB", "Prisma", "API", "Vercel AI SDK", "Prompt Engineering"];
+    const filters = ["All", "React", "Flask", "Next.js", "JavaScript", "Typescript", "HTML", "CSS", "jQuery", "Python(Flask)", "Mysql", "MongoDB", "Prisma", "API", "Vercel AI SDK", "Prompt Engineering"];
 
     return(
         <Layout>
@@ -155,7 +177,24 @@ function Project (){
 
                             <div className="md:w-[65%] w-full p-4 md:p-0">
                                 <h3 className="md:text-[30px] text-[24px] font-semibold">{project.name}</h3>
-                                <p className="text-[16px] md:w-[85%]">{project.description}</p>
+                                <div className="md:w-[85%]">
+                                <p className="text-[16px]">
+                                    {project.description.length > 180 
+                                    ? `${project.description.substring(0, 180)}... ` 
+                                    : project.description}
+                                    {project.description.length > 180 && (
+                                    <button
+                                        onClick={() => {
+                                        setSelectedProject(project);
+                                        setModalOpen(true);
+                                        }}
+                                        className="text-[#0000ff] font-medium hover:underline bg-transparent focus:outline-none ml-1 text-xs"
+                                    >
+                                        Read more ➜
+                                    </button>
+                                    )}
+                                </p>
+                                </div>
                                 {project.techStack.length > 0 && (
                                     <ul className="flex flex-wrap gap-3 mt-[10px]">
                                         {project.techStack.map((tech) => (
@@ -186,6 +225,68 @@ function Project (){
                 }
                 
             </div>
+
+            {modalOpen && selectedProject && (
+                <div 
+                    className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-70"
+                    onClick={() => setModalOpen(false)}
+                >
+                    <div 
+                        className="project-modal relative bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
+                        onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
+                    >
+                        {/* Close button */}
+                        <div className='project-modal-header w-full min-h-[30px] sticky top-0 flex justify-end px-2 bg-white'>
+                            <button
+                                onClick={() => setModalOpen(false)}
+                                className="text-gray-500 hover:text-[#801B36] text-xl font-bold z-10"
+                                aria-label="Close modal"
+                            >
+                                <FontAwesomeIcon icon={faX} className='h-3 w-3'/>
+                            </button>
+                        </div>
+
+                        {/* Modal content */}
+                        <div className="py-3 px-4">
+                            {/* Image */}
+                            <div className="w-full mb-5 bg-[#801B36] rounded-lg">
+                                <img 
+                                src={selectedProject.image} 
+                                alt={selectedProject.name}
+                                className="w-full h-auto rounded-lg shadow-md object-cover"
+                                />
+                            </div>
+                            {/* Details */}
+                            <div className="w-full">
+                                <h2 className="text-2xl font-bold text-[#801B36] mb-3">{selectedProject.name}</h2>
+                                <p className="mb-4 text-[16px] leading-relaxed">{selectedProject.description}</p>
+                                
+                                {/* Tech stack */}
+                                {selectedProject.techStack.length > 0 && (
+                                    <div className="mb-4">
+                                        <h3 className="text-md font-semibold mb-2">Technologies</h3>
+                                        <ul className="flex flex-wrap gap-2">
+                                        {selectedProject.techStack.map(tech => (
+                                            <li key={tech} className="bg-[#4F4F4F] text-white px-2 py-[2px] rounded-lg text-xs">{tech}</li>
+                                        ))}
+                                        </ul>
+                                    </div>
+                                )}
+
+                                {/* Links */}
+                                <div className="w-full flex gap-5 items-center mt-4 [&>a]:text-sm text-[#801B36] [&>a]:flex [&>a]:items-center [&>a]:gap-x-[0.6px] font-normal">
+                                    <a href={selectedProject.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                                        <FontAwesomeIcon icon={faGithub} /> GitHub
+                                    </a>
+                                    <a href={selectedProject.website} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                                        <FontAwesomeIcon icon={faLink} /> Visit Website
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </Layout>  
         
     )

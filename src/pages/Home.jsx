@@ -37,7 +37,7 @@ function  Home(){
                 
                 <Link to="/projects" className="showcase block"  data-aos-delay='500' data-aos='fade-up'  data-aos-easing="ease-in-out">
                     <p className="showcase-title">Completed Projects</p>
-                    <p className="showcase-count">5+</p> 
+                    <p className="showcase-count">8+</p> 
                 </Link>
                 
                 <div className="showcase cursor-pointer"  data-aos-delay='500' data-aos='fade-up'  data-aos-easing="ease-in-out">

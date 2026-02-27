@@ -7,6 +7,7 @@ import Home from './pages/Home';
 const Project = lazy(() => import('./pages/Project'));
 const About = lazy(() => import('./pages/About'));
 const Skill = lazy(() => import('./pages/Skill'))
+const Experience = lazy(() => import('./pages/Experience'))
 import NotFound from './pages/NotFound';
 
 
@@ -74,6 +75,7 @@ function App() {
           <Route path="/about-me" element={<About />} />
           <Route path="/skill" element={<Skill />} />
           <Route path="/projects" element={<Project />} />
+          <Route path="/experience" element={<Experience />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         
