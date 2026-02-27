@@ -10,6 +10,7 @@ const handyman = '/handyman.png'
 const portfolio = '/portfolio.png'
 const portfoliov2 = '/portfolio_v2.png'
 const pulseCast = '/pulse_cast.png'
+const tripMate = '/tripmate.png'
  
 const projects = [
     {
@@ -56,7 +57,16 @@ const projects = [
         link: "https://github.com/oloruntobi-grace-ayomide/pulseCast",
         website: "https://pulse-cast-pi.vercel.app",
         techStack: ["Next.js", "Tailwind", "NewsAPI", "OpenWeatherMap"]
-    }
+    },
+    {
+        id: 6,
+        name: "Tripmate",
+        description: "TripMate is an AI travel assistant built with Next.js 15, featuring real-time chat (Vercel ai sdk)and tools like trip card, packing lists and files upload. It showcases full-stack skills including serverless APIs, and optimistic UI updates.",
+        image: tripMate,
+        link: "https://github.com/grace-ayomide-orji/TripMate",
+        website: "https://trip-mate-v1.vercel.app",
+        techStack: ["Next.js", "Tailwind", "Vercel AI SDK", "OpenWeatherMap"]
+    },
 ]
 
 function Project (){
