@@ -6,8 +6,8 @@ const experiences = [
       role: "Full-Stack Developer",
       company: "Langtrace AI",
       duration: "2025 - Present",
-      description: "Working remotely on multiple client projects, building full-stack features with Next.js, React, and AI tools. Collaborating with cross-functional teams to deliver scalable solutions, integrating Vercel AI SDK for intelligent features, and maintaining high code quality with TypeScript and best practices. This role has deepened my understanding of modern frameworks and AI-powered applications.",
-      techStack: ["Next.js", "TypeScript", "React", "TailwindCSS", "Vercel AI SDK", "RESTFUL API"]
+      description: "Working on multiple client projects, building full-stack features with Next.js, React, and AI tools. Collaborating with cross-functional teams to deliver scalable solutions, integrating Vercel AI SDK for intelligent features, and maintaining high code quality with TypeScript and best practices. This role has deepened my understanding of modern frameworks and AI-powered applications.",
+      techStack: ["Next.js", "TypeScript", "React", "TailwindCSS", "PostgresSQL", "Prisma", "Vercel AI SDK", "RESTFUL API"]
     },
     {
       id: 2,

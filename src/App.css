@@ -182,17 +182,19 @@ span.waving-hand {
 
 
 .showcase-parent{
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 20px;
+  justify-items: center;
   background:#ffffff;
   padding-top:100px;
   padding-bottom:100px;
 }
 
 .showcase{
-  height:600px;
-  width:45%;
-  border-radius: 118px 70px 118px 70px;
+  min-height:300px;
+  border-radius: 98px 60px 98px 60px;
   background-color:#4F4F4F;
   display: flex;
   flex-direction: column;
@@ -202,21 +204,20 @@ span.waving-hand {
 }
 
 .showcase p.showcase-title, .showcase p.showcase-count{
-  font-size:75px;
+  font-size:25px;
   font-weight:600;
   color:#ffffff;
-  line-height:55px;
   text-wrap:wrap;
   line-height:normal;
 }
 
 .showcase p.showcase-count{
-  font-size:150px;
+  font-size:120px;
 }
 
 .showcase:hover{
-  background: #801B36;
-  border-radius: 70px 118px 70px 118px;
+  background-color: #801B36;
+  border-radius: 60px 98px 60px 98px;
 }
 
 
@@ -529,17 +530,16 @@ p.special-text a:hover{
 
 .showcase{
   border-radius: 70px 40px 70px 40px;
-  padding:25px;
-  height:400px;
-  width:48%;
+  padding:0 25px;
+  min-height:250px;
 }
 
 .showcase p.showcase-title{
-  font-size:52px;
+  font-size:20px;
 }
 
 .showcase p.showcase-count{
-  font-size:120px;
+  font-size:90px;
 }
 
 .showcase:hover{
@@ -653,19 +653,10 @@ p.special-text a:hover{
   background-color:rgba(128, 27, 54, 0.3);
 }
 
-
 .burger-toggler{
     font-size:25px;
     color: #801B36;
     border: none;
-}
-
-.showcase-parent{
-  flex-direction: column;
-}
-
-.showcase:not(:last-child){
-    margin-bottom:35px;
 }
 
 .hero-section {
@@ -733,23 +724,27 @@ p.special-text a:hover{
   font-size:18px;
 }
 
+.showcase-parent{
+  grid-column-gap:10px;
+}
+
 .showcase{
-  border-radius: 70px 40px 70px 40px;
-  padding:25px;
-  height:400px;
-  width:100%;
+  border-radius: 60px 30px 60px 30px;
+  padding:0 15px;
+  min-height:220px;
 }
 
 .showcase p.showcase-title, .showcase p.showcase-count{
-  font-size:65px;
+  font-size:20px;
+  max-width:90%;
 }
 
 .showcase p.showcase-count{
-  font-size:120px;
+  font-size:70px;
 }
 
 .showcase:hover{
-  border-radius: 40px 70px 40px 70px;
+  border-radius: 30px 60px 30px 60px;
 }
 
 .contact-header{
@@ -883,31 +878,31 @@ p.special-text a:hover{
 }
 
 .showcase-parent{
+  grid-template-columns:1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-row-gap:15px;
   padding-top:80px;
   padding-bottom:80px;
 }
 
 .showcase{
-  border-radius: 80px 30px 80px 30px;
-  padding:25px;
-  height:380px;
+  border-radius: 70px 30px 70px 30px;
+  padding:0 25px;
+  min-height:180px;
   width:100%;
-}
-
-.showcase:not(:last-child){
-  margin-bottom:45px;
+  align-items: center;
 }
 
 .showcase p.showcase-title{
-  font-size:52px;
+  font-size:20px;
 }
 
 .showcase p.showcase-count{
-  font-size:120px;
+  font-size:80px;
 }
 
 .showcase:hover{
-  border-radius: 30px 80px 30px 80px;
+  border-radius: 30px 70px 30px 70px;
 }
 
 .contact-header{
@@ -1058,23 +1053,27 @@ p.special-text a:hover{
 }
 
 .showcase-parent{
+  grid-template-columns:1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-row-gap:15px;
   padding-top:70px;
   padding-bottom:70px;
 }
 
 .showcase{
   border-radius: 60px 30px 60px 30px;
-  padding:15px;
-  height:300px;
+  padding:0 25px;
+  min-height:160px;
   width:100%;
+  align-items: center;
 }
 
-.showcase p.showcase-title, .showcase p.showcase-count{
-  font-size:35px;
+.showcase p.showcase-title{
+  font-size:20px;
 }
 
 .showcase p.showcase-count{
-  font-size:100px;
+  font-size:70px;
 }
 
 .showcase:hover{

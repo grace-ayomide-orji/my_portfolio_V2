@@ -36,14 +36,20 @@ function  Home(){
             <div className="showcase-parent parent" data-aos='fade-up' >
                 
                 <Link to="/projects" className="showcase block"  data-aos-delay='500' data-aos='fade-up'  data-aos-easing="ease-in-out">
-                    <p className="showcase-title">Completed Projects</p>
+                    <p className="showcase-title">Personal Projects</p>
                     <p className="showcase-count">8+</p> 
                 </Link>
+
+                <div className="showcase block"  data-aos-delay='500' data-aos='fade-up'  data-aos-easing="ease-in-out">
+                    <p className="showcase-title">Client Collaborations</p>
+                    <p className="showcase-count">6+</p> 
+                </div>
                 
-                <div className="showcase cursor-pointer"  data-aos-delay='500' data-aos='fade-up'  data-aos-easing="ease-in-out">
+                <Link to="/experience" className="showcase block"  data-aos-delay='500' data-aos='fade-up'  data-aos-easing="ease-in-out">
                     <p className="showcase-title">Years of Experience</p>
                     <p className="showcase-count">2+</p>
-                </div>
+                </Link>
+                
             </div>
 
             <Contact/>
