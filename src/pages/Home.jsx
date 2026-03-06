@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import Contact from "../components/Contact";
-import myPicture from '../assets/images/my_pic.png'
+// import myPicture from '../assets/images/my_pic.png'
+import myPicture from '../assets/images/my_pic2.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faArrowRight, faDownload} from "@fortawesome/free-solid-svg-icons";
