@@ -48,7 +48,7 @@ const projects = [
         description: "After landing my first job, I realized I needed to level up my frontend skills. I hadn't learned React during bootcamp, so I decided to rebuild my portfolio as a learning project. I taught myself React and Tailwind CSS (coming from Bootstrap) and created this sleek, interactive version. The difference between v1 and v2 is like night and day, it shows how much I've grown in design and frontend development. I'm really proud of it.",
         image: portfoliov2,
         link: "https://github.com/grace-ayomide-orji/my_portfolio_V2",
-        website: "https://www.graceayomide.com",
+        website: "https://www.graceayomide.vercel.app",
         techStack: ["React", "Tailwind"]
     },
     {
