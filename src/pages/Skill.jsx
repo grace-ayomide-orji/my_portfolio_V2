@@ -141,6 +141,10 @@ function  Skill(){
                     <p>GitHub</p>
                 </div>
                 <div className="w-1/3 sm:w-1/4 lg:w-1/6 mb-3 text-center">
+                    <i className="devicon-docker-plain text-4xl"></i>
+                    <p>Docker</p>
+                </div>
+                <div className="w-1/3 sm:w-1/4 lg:w-1/6 mb-3 text-center">
                     <i className="devicon-vscode-plain text-4xl"></i>
                     <p>VS Code</p>
                 </div>

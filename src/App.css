@@ -125,7 +125,7 @@ span.waving-hand {
 .profile-pic {
   display: flex;
   justify-content: center;
-  background-color:#9A2645;
+  background-color:#801B36;
   border-radius:40% 60% 46% 54% / 60% 57% 43% 40%;
   position: relative;
   height:510px;
@@ -134,8 +134,8 @@ span.waving-hand {
 
 .profile-pic img {
   position: absolute;
-  bottom:-30px;
-  width:380px;
+  bottom:-120px;
+  width:350px;
   transform: scale(1);
   transition: transform 0.5s ease-in-out;
 }
@@ -503,8 +503,8 @@ p.special-text a:hover{
 }
 
 .profile-pic img{
-  bottom:-10px;
-  width:250px;
+  bottom:-120px;
+  width:260px;
 }
 
 .intro h1{
@@ -695,12 +695,12 @@ p.special-text a:hover{
   height:400px;
   width:80%;
   margin: auto;
-  margin-bottom:5px;
+  margin-bottom:10px;
 }
 
 .profile-pic img{
-  bottom:-10px;
-  width:270px;
+  bottom:-80px;
+  width:250px;
 }
 
 .intro h1{
@@ -849,12 +849,12 @@ p.special-text a:hover{
   height:400px;
   width:90%;
   margin: auto;
-  margin-bottom:20px;
+  margin-bottom:25px;
 }
 
 .profile-pic img{
-  bottom:-10px;
-  width:280px;
+  bottom:-90px;
+  width:260px;
 }
 
 .intro h1{
@@ -1024,13 +1024,13 @@ p.special-text a:hover{
 
 .profile-pic {
   height:300px;
-  margin-bottom:20px;
+  margin-bottom:40px;
 }
 
 .profile-pic img{
   position: absolute;
-  bottom:-10px;
-  width:200px;
+  bottom:-100px;
+  width:220px;
 }
 
 .intro h1{
