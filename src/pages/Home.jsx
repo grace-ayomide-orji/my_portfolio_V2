@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import Contact from "../components/Contact";
-// import myPicture from '../assets/images/my_pic.png'
 import myPicture from '../assets/images/my_pic2.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
@@ -25,7 +24,7 @@ function  Home(){
                     </div>
                     <div className="flex gap-x-5 md:gap-y-o gap-y-4 md:flex-row flex-col mt-[20px]">
                         <Link to="/projects" className="hero-buttons-links view-my-works"> View My Works <FontAwesomeIcon icon={faArrowRight} /></Link>
-                        <Link to="https://drive.google.com/file/d/18fFHDe8v_CE-QZMEy88q9sYRtfvWJ8ca/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hero-buttons-links download-cv-btn"> Download CV <FontAwesomeIcon icon={faDownload} /></Link>
+                        <Link to="https://drive.google.com/file/d/1ufnUPhYLKpSoq1YHA3S4W0HemdbGwD26/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hero-buttons-links download-cv-btn"> Download CV <FontAwesomeIcon icon={faDownload} /></Link>
                     </div>
                 </div>
 
