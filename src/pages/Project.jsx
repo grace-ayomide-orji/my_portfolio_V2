@@ -13,6 +13,7 @@ const pulseCast = '/pulse_cast.png'
 const tripMate = '/tripmate.png'
 const yunCapital='/yuncapital.png'
 const exceedingGrace='/exceedinggrace.png'
+const safeRoom="/safe_room.png"
  
 const projects = [
     {
@@ -86,6 +87,15 @@ const projects = [
         link: "https://github.com/grace-ayomide-orji/ExceedingGrace",
         website: "https://exceedinggrace.vercel.app",
         techStack: ["React", "Tailwind", "AOS"]
+    },
+    {
+        id: 9,
+        name: "Safe Room",
+        description: "Counseling shouldn't require an account just to book a conversation. Safe Room is a faith-based counseling platform I built with Next.js, Prisma, and PostgreSQL, letting clients book sessions and manage them entirely through secure, tokenized links, no login required. I built the full stack: booking and recurring-session logic, Google Calendar/Meet integration, Stripe and Flutterwave donations, and an admin dashboard the counselor can run without touching code. I also went deep on security, HMAC-signed sessions, rate limiting, and properly verified middleware, treating it like software that would actually go to production, not just a portfolio demo.",
+        image: safeRoom,
+        link: "https://github.com/grace-ayomide-orji/saferoom",
+        website: "https://saferoomconselling.vercel.app",
+        techStack: ["Next.js", "Tailwind", "Prisma"]
     }
 ]
 
