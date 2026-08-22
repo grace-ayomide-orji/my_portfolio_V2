@@ -22,7 +22,7 @@ const projects = [
         description: "My very first project, built from scratch as the final exam of my bootcamp. It's a service marketplace where users can browse, book, and manage handyman services. I chose Python(Flask) because that's what i learned, and I handled everything from authentication, database design (MySQL), to frontend with Bootstrap. It was challenging but incredibly rewarding, finishing it gave me the confidence to present something real at the end of the course. Interestingly, this project landed me my first internship. It will always hold a special place in my heart.",
         image: handyman,
         link: "https://github.com/grace-ayomide-orji/handyman",
-        website: "https://myhandyman.pythonanywhere.com/",
+        website: "https://myhandyman-lowl.onrender.com/",
         techStack: ["HTML", "CSS", "JavaScript", "jQuery", "Python(Flask)", "Mysql"]
     },
     {
@@ -37,7 +37,7 @@ const projects = [
     {
         id: 3,
         name: "Beulah",
-        description: "After bootcamp, I wanted to use my new skills to give back. I attend a wonderful non-denominational fellowship ministry called Beulah Foundation for Christ, and at the time their website was outdated and barely functional. So I took it upon myself to build them a new one and it was my first unsupervised project. I designed the UI, built it with Flask, added an admin dashboard for managing resources and event updates, and even handled the GoDaddy deployment. Seeing it live and knowing it serves the community fills me with pride and joy.",
+        description: "After bootcamp, I wanted to use my new skills to give back. I attend a wonderful non-denominational fellowship ministry called Beulah Foundation for Christ, and at the time their website was outdated and barely functional. So I took it upon myself to build them a new one and it was my first unsupervised project. I designed the UI, built it with Flask, added an admin dashboard for managing resources and event updates, and even handled the NameCheap CPanel deployment. Seeing it live and knowing it serves the community fills me with pride and joy.",
         image: beulah,
         link: "https://github.com/grace-ayomide-orji/Beulah-App",
         website: "https://beufoundation.org/",

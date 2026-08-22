@@ -86,7 +86,7 @@ function Navbar(){
                 </li>
 
                 <li>
-                    <a href="https://drive.google.com/uc?export=download&id=1ufnUPhYLKpSoq1YHA3S4W0HemdbGwD26" target='_blank' rel="noopener noreferrer" className='download-resume'>
+                    <a href="https://drive.google.com/uc?export=download&id=1rmngqEOHpU594J9Vyoij0ae1lIU_e5fY" target='_blank' rel="noopener noreferrer" className='download-resume'>
                         Bio & Resume 
                         <img src={dowloadIcon} alt="download-my-resume-icon" className='inline w-[18px] h-[18px]'/>
                     </a>
